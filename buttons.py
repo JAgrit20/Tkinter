@@ -1,8 +1,13 @@
 from   tkinter import  *
 root = Tk()
 
+e = Entry(root,fg="blue",bg="red")
+e.insert(0,"Enter your name")
+e.pack()
+
 def ontap():
-    ml = Label(root,text = "hey you clicked me!!")
+    variable1 = "hello " + e.get()
+    ml = Label(root,text = variable1)
     ml.pack()
 
 b1 = Button(root, text="hello jags",command=ontap)
